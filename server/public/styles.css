@@ -1,0 +1,15 @@
+.background {
+    height: 95vh;
+    width: 95vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    height: 10vh;
+    width: 10vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+}

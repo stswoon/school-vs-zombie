@@ -1,0 +1,24 @@
+{
+  "name": "poker-planning",
+  "version": "0.5.7",
+  "description": "Poker planning",
+  "engines": {
+    "node": "14.x"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run clear && npm run patch-version && npm run start-server && npm run copy-client",
+    "start-server": "cd server && npm run build && npm run start",
+    "---": "echo 0",
+    "serve-server": "cd server && npm run serve",
+    "serve-client": "cd client && npm run serve",
+    "build-client": "cd client && npm run build",
+    "copy-client": "cd client/dist && copyfiles --verbose ./**/* ../../server/dist/public",
+    "patch-version": "npm --no-git-tag-version version patch",
+    "clear": "rimraf server/dist"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.1"
+  }
+}
